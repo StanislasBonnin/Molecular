@@ -11,12 +11,22 @@ def home():
     """ Render index """
     return render_template('index.html')
 
-@app.route('/about')
+
+
+@app.route('/quiz')
+def quiz():
+    
+    return render_template('quiz.html')
+
+
+
+@app.route('/about',methods=['GET'])
 def about():
     
     return render_template('about.html')
-
-
+    
+    
+    
 
 @app.errorhandler(404)
 def page_not_found(_):
